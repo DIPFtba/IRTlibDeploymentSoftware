@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  testapp.player:
+    image: ghcr.io/software-driven/testappplayerserver:0.5.1
+    ports:
+      - 8001:8001
+    volumes:
+      - ./TestApp.Player/Studies:/app/Studies
+      - ./TestApp.Player/Runtime:/app/Runtime
+      - type: bind
+        source: ./TestApp.Player/appsettings.json
+        target: /app/appsettings.json
+
+
