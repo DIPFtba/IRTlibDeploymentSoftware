@@ -2,14 +2,21 @@ version: '3.4'
 
 services:
   testapp.player:
-    image: ghcr.io/software-driven/testappplayerserver:0.5.1
+    image: ghcr.io/software-driven/testappplayerserver:1.0.0
     ports:
-      - 8001:8001
+      - 8001:80
     volumes:
-      - ./TestApp.Player/Studies:/app/Studies
-      - ./TestApp.Player/Runtime:/app/Runtime
+      - ./TestApp.Player/Logins:/app/data
+      - ./TestApp.Player/Results:/app/results
+      - ./TestApp.Player/Content:/app/Content
       - type: bind
         source: ./TestApp.Player/appsettings.json
         target: /app/appsettings.json
+  testapp.editor:
+    image: ghcr.io/software-driven/testappeditorserver:1.0.0
+    ports:
+      - 8002:80
+    volumes:
+      - ./TestApp.Editor/Data:/app/data
 
 
