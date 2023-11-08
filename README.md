@@ -1,4 +1,3 @@
-
 # TestApp Player 
 
 ## Requirements
@@ -14,12 +13,4 @@
 2. Execute ./start.sh to start the TestApp Player
 3. Execute ./stop.sh to stop the TestApp Player
 
-## Application URLs
-
-* Player: http://localhost
-* Editor: http://localhost:8080
-* Default login for the editor:
-	* user: IRTlibAdmin
-	* pwd: test123
-* To update the default password:
-	* `sudo htpasswd  ./nginx/.htpasswd IRTlibAdmin` 
+ 
