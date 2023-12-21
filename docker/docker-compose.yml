@@ -4,7 +4,7 @@ services:
   testapp.player:
     image: ghcr.io/software-driven/testappplayerserver:preview
     ports:
-      - 8001:80
+      - 8001:8080
     volumes:
       - ./TestApp.Player/Logins:/app/data
       - ./TestApp.Player/Results:/app/results
@@ -15,8 +15,6 @@ services:
   testapp.editor:
     image: ghcr.io/software-driven/testappeditorserver:preview
     ports:
-      - 8002:80
+      - 8002:8080
     volumes:
       - ./TestApp.Editor/Data:/app/data
-
-
