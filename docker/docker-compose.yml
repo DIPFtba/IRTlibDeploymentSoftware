@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   testapp.player:
-    image: ghcr.io/software-driven/testappplayerserver:1.1.0
+    image: ghcr.io/software-driven/testappplayerserver:1.0.1
     ports:
       - 8001:8080
     volumes:
@@ -13,7 +13,7 @@ services:
         source: ./TestApp.Player/appsettings.json
         target: /app/appsettings.json
   testapp.editor:
-    image: ghcr.io/software-driven/testappeditorserver:1.1.0
+    image: ghcr.io/software-driven/testappeditorserver:1.0.1
     ports:
       - 8002:8080
     volumes:
